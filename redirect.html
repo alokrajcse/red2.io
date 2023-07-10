@@ -4,8 +4,7 @@
   <title>Redirecting...</title>
   <meta http-equiv="refresh" content="0;URL=">
   <script>
-    var urlParams = new URLSearchParams(window.location.search);
-    var destinationUrl = urlParams.get('destination');
+    var destinationUrl = window.localStorage.getItem('destinationUrl');
     if (destinationUrl) {
       window.location.href = destinationUrl;
     }
