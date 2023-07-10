@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0;URL=">
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var destinationUrl = urlParams.get('destination');
+    if (destinationUrl) {
+      window.location.href = destinationUrl;
+    }
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>If the redirect doesn't work, please click <a href="">here</a>.</p>
+</body>
+</html>

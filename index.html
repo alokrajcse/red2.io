@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Redirect Site</title>
+  <script>
+    function updateDestinationUrl() {
+      var destinationUrl = document.getElementById('destination-url').value;
+      document.getElementById('alternate-link').href = 'redirect.html?destination=' + encodeURIComponent(destinationUrl);
+    }
+  </script>
+</head>
+<body>
+  <h1>URL Redirect Site</h1>
+  
+  <h2>Option 1: Destination URL</h2>
+  <input type="text" id="destination-url" placeholder="Enter the destination URL">
+  <button onclick="updateDestinationUrl()">Update Destination</button>
+
+  <h2>Option 2: Alternate Link</h2>
+  <p>Share this link:</p>
+  <p><a id="alternate-link" href="">Redirect to Destination</a></p>
+</body>
+</html>
