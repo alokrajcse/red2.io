@@ -5,7 +5,7 @@
   <script>
     function updateDestinationUrl() {
       var destinationUrl = document.getElementById('destination-url').value;
-      document.getElementById('alternate-link').href = 'redirect.html?destination=' + encodeURIComponent(destinationUrl);
+      window.localStorage.setItem('destinationUrl', destinationUrl);
     }
   </script>
 </head>
@@ -18,6 +18,6 @@
 
   <h2>Option 2: Alternate Link</h2>
   <p>Share this link:</p>
-  <p><a id="alternate-link" href="">Redirect to Destination</a></p>
+  <p><a href="redirect.html">Redirect to Destination</a></p>
 </body>
 </html>
