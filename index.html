@@ -5,7 +5,7 @@
   <script>
     function updateDestinationUrl() {
       var destinationUrl = document.getElementById('destination-url').value;
-      window.localStorage.setItem('destinationUrl', destinationUrl);
+      document.getElementById('constant-link').href = destinationUrl;
     }
   </script>
 </head>
@@ -16,8 +16,7 @@
   <input type="text" id="destination-url" placeholder="Enter the destination URL">
   <button onclick="updateDestinationUrl()">Update Destination</button>
 
-  <h2>Option 2: Alternate Link</h2>
-  <p>Share this link:</p>
-  <p><a href="redirect.html">Redirect to Destination</a></p>
+  <h2>Option 2: Constant Link</h2>
+  <p>Constant link: <a id="constant-link" href="">Redirect to Destination</a></p>
 </body>
 </html>
